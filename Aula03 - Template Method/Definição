@@ -1,0 +1,7 @@
+﻿Intenção
+Definir o esqueleto de um algoritmo em uma operação, postergando alguns passos para as subclasses. Template Method permite
+ que subclasses redefinam certos passos de um algoritmo sem mudar a estrutura do mesmo.
+
+Motivação
+Considere um framework para aplicações que fornece as classes Application e Document. A classe Application é responsável por abrir 
+documentos existentes armazenados num formato externo, tal como um arquivo. Um objeto Document representa a informação num documento, depois que ela foi lida do arquivo. 
