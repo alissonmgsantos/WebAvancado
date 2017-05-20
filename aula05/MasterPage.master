@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Mercadinho</title>
+    <link href="Content/Style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="divForm">
+            <header>
+                <div style="text-align: right">
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout" />
+                </div>
+                <div id="divGeral">
+                    <div id="logo">
+                        <h1>E-Commerce</h1>
+                    </div>
+                    <div id="menu">
+                        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                            <Items>
+                                <asp:MenuItem Text="Cadastro" Value="cadastro">
+                                    <asp:MenuItem Text="Produto" Value="produto" NavigateUrl="~/ProdutoListagem.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Fornecedor" Value="fornecedor"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Venda" Value="venda"></asp:MenuItem>
+                                <asp:MenuItem Text="Impressão" Value="impressao"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </div>
+                </div>
+                <hr />
+            </header>
+            <div id="painel" class="painelcentral">
+                <asp:ContentPlaceHolder ID="conteudo" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                <div id="Rodape">
+                    <div class="footer-inner">
+                        <div class="footer-content">
+                            <hr />
+                            <p>Version 1.0</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
